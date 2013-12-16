@@ -49,18 +49,18 @@ for listing in soup.find_all("li","altlisting"):
 	listingRate = str(rate['data-rate'])
 
 	#find the accommodations info 
-	for room in soup.find("span","altlisting-center"):
-		bedsRaw = str((room['data-beds']))
-		listingBeds = int(re.findall(r'[0-9]+', bedsRaw)[0])
-		bathsRaw = str((room['data-baths']))
-		listingBaths = int(re.findall(r'[0-9]+', bathsRaw)[0])
-		sleepsRaw = str((room['data-sleeps']))
-		listingSleeps = int(re.findall(r'[0-9]+', sleepsRaw)[0])
-		listingTitle = str(room.a.text)
+	room = soup.find("span","altlisting-center")
+	bedsRaw = str((room['data-beds']))
+	listingBeds = int(re.findall(r'[0-9]+', bedsRaw)[0])
+	bathsRaw = str((room['data-baths']))
+	listingBaths = int(re.findall(r'[0-9]+', bathsRaw)[0])
+	sleepsRaw = str((room['data-sleeps']))
+	listingSleeps = int(re.findall(r'[0-9]+', sleepsRaw)[0])
+	listingTitle = str(room.a.text)
 	
 	#find the region listing info 
-	for region in soup.find("span","altlisting-region"):
-		listingRegion = str(region.a.text)
+	region = soup.find("span","altlisting-region")
+	listingRegion = str(region.a.text)
 	
 	#walk into the icons div and assess as booleans
 	handicappedAccessible = False
@@ -68,30 +68,30 @@ for listing in soup.find_all("li","altlisting"):
 	bookOnline = False
 	onMap = False 
 	ownerOperated = False
-	for icons in soup.find("div","altlisting-icons"):
-		if 'book online' in str(icons.find("span","altlisting-icon-bookable")['title']):
-			bookOnline = True
-		if 'not' in str(icons.find("span","altlisting-icon-handicap")['title']):
-			handicappedAccessible = False
-		if 'friendly' in str(icons.find("span","altlisting-icon-pet")['title']):
-			petFriendly = True
-		if 'has' in str(icons.find("span","altlisting-icon-marker")['title']):
-			onMap = True
-		if 'owner' in str(icons.find('span','altlisting-icon-owner')['class']):
-			ownerOperated = True
-		starsRaw = str(icons.find('span','altlisting-icon-reviews')['class'][1]) 
-		starsString = re.findall(r'[0-9]+', starsRaw)[0]
-		if len(starsString) > 1:
-			listingStars = float(starsString[0] + '.' + starsString[-1])
-		else:
-			listingStars = int(starsString)
-		listingReviews = int(str(icons.find('span','altlisting-icon-reviews').text))
+	icons in soup.find("div","altlisting-icons")
+	if 'book online' in str(icons.find("span","altlisting-icon-bookable")['title']):
+		bookOnline = True
+	if 'not' in str(icons.find("span","altlisting-icon-handicap")['title']):
+		handicappedAccessible = False
+	if 'friendly' in str(icons.find("span","altlisting-icon-pet")['title']):
+		petFriendly = True
+	if 'has' in str(icons.find("span","altlisting-icon-marker")['title']):
+		onMap = True
+	if 'owner' in str(icons.find('span','altlisting-icon-owner')['class']):
+		ownerOperated = True
+	starsRaw = str(icons.find('span','altlisting-icon-reviews')['class'][1]) 
+	starsString = re.findall(r'[0-9]+', starsRaw)[0]
+	if len(starsString) > 1:
+		listingStars = float(starsString[0] + '.' + starsString[-1])
+	else:
+		listingStars = int(starsString)
+	listingReviews = int(str(icons.find('span','altlisting-icon-reviews').text))
 
 	thisListing = {
 				'ID': listingID,
 				'Title': listingTitle,
 				'URL': listingURL,
-				#'Booking Duration': listingDuration,
+				'Booking Duration': listingDuration,
 				'Minimum Stay': listingMinStay,
 				'Rate Range': listingRate,
 				'Beds': listingBeds,
