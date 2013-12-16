@@ -108,8 +108,12 @@ for listing in soup.find_all("li","altlisting"):
 				}
 	properties.append(thisListing)
 
-print 'CHECK OUT SPORTS'
-pprint(properties)
+#write to csv and save to directory 
+keys = thisListing.keys()
+f = open ('Cape Coral VRBO Listings.csv','wb')
+DW = csv.DictWriter(f,keys)
+DW.writer.writerow(keys)
+DW.writerows(properties)
 
 
 
