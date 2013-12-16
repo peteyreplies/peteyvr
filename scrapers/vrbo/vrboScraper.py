@@ -3,7 +3,6 @@
 
 ##import some libraries which will probably be useful
 from bs4 import BeautifulSoup
-from collections import Counter
 from pprint import pprint
 import os
 import csv
@@ -11,9 +10,7 @@ import string
 import urllib
 import urllib2
 import sys
-import ast
 import re
-import time
 
 ##fetch ALL THE LISTINGS and load into a huge soup 
 #set some baseline parameters
@@ -22,8 +19,8 @@ resultsURL = "/vacation-rentals/usa/florida/south-west/cape-coral?page="
 i = 1
 html = ""
 
-#loop through & download the first 10 pages of listings 
-while i <= 10:
+#loop through & download the first 5 pages of listings 
+while i <= 5:
 	doc = urllib2.urlopen(baseURL + resultsURL + str(i))
 	html = html + doc.read()
 	i = i + 1
