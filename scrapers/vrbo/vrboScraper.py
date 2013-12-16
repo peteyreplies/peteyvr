@@ -68,7 +68,7 @@ for listing in soup.find_all("li","altlisting"):
 	bookOnline = False
 	onMap = False 
 	ownerOperated = False
-	icons in soup.find("div","altlisting-icons")
+	icons = soup.find("div","altlisting-icons")
 	if 'book online' in str(icons.find("span","altlisting-icon-bookable")['title']):
 		bookOnline = True
 	if 'not' in str(icons.find("span","altlisting-icon-handicap")['title']):
