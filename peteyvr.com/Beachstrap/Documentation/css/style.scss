@@ -1,0 +1,161 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, li, blockquote, fieldset, address,table { margin:5px 0; }
+
+fieldset { padding:10px 0; }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+}
+
+a {
+    color:#e02a5f;
+    text-decoration: none;
+    font-weight:bold;
+}
+a:hover {
+    color: #0050a3;
+
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 18px;
+    line-height:22px;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #404040;
+    line-height: 36px;
+
+}
+h1 {
+    font-size: 30px;
+     margin-bottom: 18px;
+}
+h2 {
+    font-size: 24px;
+     margin-top: 18px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+
+
+ ul, ol {
+	 list-style-position: inside;
+ }
+
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+        background-color: #f8f8f8;
+
+}
+pre code {
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+#wrapper{
+   max-width: 960px;
+	margin:0 auto;
+	overflow: hidden;
+	padding: 20px ;
+}
+
+#left-col{
+	width:240px;
+	float: left;
+
+	ul{
+		border-top:1px solid #ccc;
+
+		li{
+		margin:0;
+		list-style-type: none;
+		border-bottom:1px solid #ccc;
+
+			a{
+				display:block;
+				padding: 10px;
+
+				&:hover{
+				background-color:#f8f8f8;
+				}
+			}
+		}
+	}
+}
+
+#main{
+	max-width:680px;
+	min-width:240px;
+	float: right;
+}
+
+@media(max-width:748px){
+
+   #left-col{
+		width:100%;
+		float: none;
+
+		ul{
+			margin: 0;
+		}
+   }
+
+	#main{
+		float: none;
+		margin-top:40px;
+	}
+}
+
+
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>Beachstrap Parallax one page HTML5 template</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="left-col">
+         <a href="http://www.mammoth-interactive.com"><img src="images/mammoth.jpg" alt="Mammoth-interactive"></a>
+
+            <ul id="contents">
+                <li><a href="#start" title="start">Start</a></li>
+                <li><a href="#template" title="installing the template">Installing the template</a></li>
+                <li><a href="#css" title="CSS files">CSS files</a></li>
+                <li><a href="#logo" title="Changing the logo">Changing the logo</a></li>
+                <li><a href="#header" title="Changing the header background image">Changing the header background image</a></li>
+					 <li><a href="#parallax" title="Changing the Parallax background">Changing the Parallax background</a></li>
+					 <li><a href="#carousel" title="Add/edit the carousel">Add/edit the carousel</a></li>
+					 <li><a href="#jquery" title="Jquery plugins">Jquery plugins</a></li>
+					 <li><a href="#social" title="Adding social icons">Adding social icons</a></li>
+					 <li><a href="#credits" title="Credits">Credits</a></li>
+            </ul>
+        </div>
+
+        <div id="main">
+        	<div id="start">
+            <h1>Beachstrap Parallax one page HTML5 template</h1>
+				<p>Documentation by "Mammoth Interactive" Created: 31 October 2013<br>
+            Latest update 31 October 2013</p>
+            <p><a href="#" title="start"></a><a href="http://www.mammoth-interactive.com">www.mammoth-interactive.com</a></p>
+
+            <p>Thanks for purchasing this template and we hope you enjoy using it and creating something great. We'd love to see how you use this theme, so please send a link to your finished work to <a href="mailto:info@mammoth-interactive.com">info@mammoth-interactive.com</a></p>
+
+            <p><a href="#" title="back to top">back to top</a></p>
+			</div>
+
+<!-- ============================================ TEMPLATE ============================================= -->
+
+<div id="template">
+            <h2>Installing the template</h2>
+            <p>the basic structure of the HTML theme looks like the following:</p>
+
+<pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Beachstrap Theme&lt;/title&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content=""&gt;
+&lt;meta name="author" content=""&gt;
+&lt;!-- STYLESHEETS --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="content"&gt;
+&lt;/div&gt;
+&lt;!-- JAVASCRIPTS --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+</pre>
+
+         	<p>Everything goes inside the <code>&lt;div&gt;</code> named "content".</p>
+         	<p><a href="#" title="back to top">back to top</a></p>
+</div><!-- html -->
+
+<!-- ============================================ CSS ============================================= -->
+<div id="css">
+            <h2>CSS Files</h2>
+            <p>The CSS theme file for Beachstrap is in the folder <em>css &gt; beachstrap-style.css</em> It follows the following structure:</p>
+<pre>
+<code>/* Table of Contents
+==================================================
+
+#GENERAL
+#HEADER
+#MAIN
+#CAROUSEL SECTION
+#PARALLAX SECTION
+#TEAM SECTION
+#SIGNUP SECTION
+#CONTACT SECTION
+#BLOG SECTION
+#FOOTER
+#MEDIA QUERIES
+
+==================================================
+*/</code>
+</pre>
+				<p><a href="#" title="back to top">back to top</a></p>
+</div><!-- end css -->
+
+<!-- ============================================ CHANGE THE LOGO ============================================= -->
+
+<div id="logo">
+            <h2>Changing the logo</h2>
+            <p>To the change the logo go through the following steps:</p>
+
+            <ol>
+                <li>Create your new logo at 200px x 40px with a transparent background</li>
+                <li>Save your logo as <strong>logo.png</strong></li>
+                <li>Place it in the folder <em>BeachStrap &gt; images</em></li>
+            </ol>
+            <p><a href="#" title="back to top">back to top</a></p>
+</div>
+
+<!-- ============================================ CHANGE THE HEADER BACKGROUND ============================================= -->
+
+<div id="header">
+            <h2>Change the header background image</h2>
+            <p>To change the background cover go through following steps:</p>
+
+            <ol>
+                <li>Create your new background image at 1280px x 747px</li>
+                <li>Save it as <strong>mainImage.jpg</strong></li>
+                <li>Place it in the folder <em>BeachStrap &gt; images</em></li>
+            </ol>
+            <p><a href="#" title="back to top">back to top</a></p>
+</div>
+
+<!-- ============================================ CHANGE THE PARALLAX BG ============================================= -->
+
+<div id="parallax">
+
+            <h2>Change the Parallax background image</h2>
+            <p>To the change the parallax scrolling image, go through the following steps</p>
+
+            <ol>
+                <li>Create a new image at 1280px x 500px and save it named <strong>parallaxBg.jpg</strong></li>
+                <li>Drop it into the images folder: <em>BeachStrap &gt; images</em></li>
+            </ol>
+            <p><a href="#" title="back to top">back to top</a></p>
+</div>
+
+<!-- ============================================ CAROUSEL ============================================= -->
+
+<div id="carousel">
+
+            <h2>Add/edit the carousel</h2>
+            <p>The basic html for the carousel slide looks like the below.</p>
+            <p>To add a new slide, copy and paste this snippet and edit the contents between the <code>&lt;div&gt;...&lt;/div&gt;</code> tags</p>
+
+<pre>
+<code>&lt;!-- item --&gt;
+&lt;div class="item"&gt;
+&lt;!-- edit contents here --&gt;
+&lt;div class="container"&gt;
+&lt;h1&gt;Example headline.&lt;/h1&gt;
+&lt;div class="caption"&gt;
+&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;img src="images/responsiveShot.png" alt="responsiveShot" class="img-responsive" &gt;
+&lt;p class="btn-wrp"&gt;&lt;a class="c2a-button"&gt;Call to action&lt;/a&gt;&lt;/p&gt;
+&lt;!-- stop editing here --&gt;
+&lt;/div&gt;
+&lt;!-- end item --&gt;</code>
+</pre>
+
+            <p><strong>also you will need to add a new indicator to the carousel as you add new slides:</strong></p>
+
+<pre>
+<code>&lt;!-- Indicators --&gt;
+&lt;ol class="carousel-indicators"&gt;
+&lt;li data-target="#myCarousel" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+&lt;li data-target="#myCarousel" data-slide-to="1"&gt;&lt;/li&gt;
+&lt;li data-target="#myCarousel" data-slide-to="2"&gt;&lt;/li&gt;
+&lt;/ol&gt;</code>
+</pre>
+
+            <p>Copy and paste the snippet below, under the last <code>&lt;li&gt;...&lt;/li&gt;</code> tag to add a new indicator.</p>
+
+<pre>
+<code>&lt;li data-target="#myCarousel" data-slide-to="2"&gt;&lt;/li&gt;</code>
+</pre>
+			<p><a href="#" title="back to top">back to top</a></p>
+</div><!-- end carousel -->
+
+<!-- ============================================ JQUERY PLUGINS ============================================= -->
+
+<div id="jquery">
+
+            <h2>Jquery plugins</h2>
+            <p>Here is a list of all the Jquery plugins we have used:</p>
+
+<pre>
+<code>&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="js/waypoints.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/beachstrap-script.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.nav.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.scrollTo.js"&gt;&lt;/script&gt;</code>
+</pre>
+
+            <p>This template uses several javascript files, all of them are placed a folder called "js" and on googleapis servers. All javascript files are placed at the bottom of the page to speed up the loading time. If you want to add your google analytics code in the page, you should add it after the javascripts and before the <code>&lt;/body&gt;</code> tag</p>
+            <p><a href="#" title="back to top">back to top</a></p>
+
+</div>
+
+<!-- ============================================ SOCIAL ICONS ============================================= -->
+
+<div id="social">
+            <h2>Adding social icons</h2>
+            <p>Adding social icons of your choice is very easy. The theme uses Font Awesome icons. You can add your own with</p>
+
+<pre>
+<code>&lt;i class="icon-twitter-sign icon-3x darkgray rm20 bm10"&gt;&lt;/i&gt;</code>
+</pre>
+			<p><a href="#" title="back to top">back to top</a></p>
+</div><!-- end jquery -->
+
+<!-- ============================================ CREDITS ============================================= -->
+
+<div id="credits">
+            <h2>Credits</h2>
+            <p>Demo images (NOT included in the package)<br>
+            <em>http://www.flickr.com</em></p>
+
+            <h3>Thanks to:</h3>
+            <p><a href="http://www.flickr.com/photos/26629142@N03"><strong>Danikapierce</strong></a><br>
+            www.flickr.com/photos/26629142@N03</p>
+
+            <p><a href="http://www.flickr.com/photos/riggott/"><strong>Matito</strong></a><br>
+            www.flickr.com/photos/riggott</p>
+
+            <p><a href="http://www.flickr.com/photos/nitsckie/"><strong>Wesley Nitsckie</strong></a><br>
+            www.flickr.com/photos/nitsckie</p>
+
+            <p><a href="http://www.flickr.com/photos/kayone73/"><strong>Ed Kwon</strong></a><br>
+            www.flickr.com/photos/kayone73</p>
+<!-- end credits -->
+<p><a href="#" title="back to top">back to top</a></p>
+</div>
+        </div><!-- end main content -->
+    </div><!-- end wrapper -->
+</body>
+</html>
